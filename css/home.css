@@ -60,8 +60,8 @@ h2 {
     background-color: #f8f9fa; /* color de fondo */
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 80%; /* ajusta el ancho según sea necesario */
-    max-width: 300px; /* ancho máximo */
+    width: 90%; /* ajusta el ancho según sea necesario */
+    max-width: 400px; /* ancho máximo */
 }
 
 .button:hover {
@@ -77,4 +77,11 @@ h2 {
 
 .content {
     flex: 1; /* El contenido toma el espacio restante */
+}
+
+/* Estilos para dispositivos con pantalla pequeña (por ejemplo, teléfonos) */
+@media (max-width: 768px) {
+    #overlay {
+        width: 80%; /* Ajustar según sea necesario para dispositivos móviles */
+    }
 }
