@@ -2,86 +2,105 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 #container {
-    position: relative;
     width: 100%;
     height: 100%;
 }
 
 #background {
-    position: absolute;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* Color de fondo opcional para el lienzo */
+    background-color: #191919; 
 }
 
 #overlay {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Ancho del 90% del contenedor */
-    max-width: 500px; /* Máximo ancho de 500px */
-    height: 90%; /* 60% de la altura del contenedor */
-    background-color: rgba(255, 255, 255, 0.5); /* Color y opacidad del rectángulo */
+    width: 90%; 
+    max-width: 500px; 
+    height: 90%; 
+    background-color: rgba(12, 21, 29, 0.7); 
     padding: 20px;
     text-align: center;
     border-radius: 15px;
-}
-
-#image {
-    width: 100px; /* ajusta el ancho según sea necesario */
-    height: 100px; /* ajusta el alto según sea necesario */
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-#buttons {
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
     align-items: center;
 }
 
+#show-top {
+    
+}
+
+#image {
+    width: 30%; 
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 50%;
+    border: 2px solid #087EC4;
+}
+
+#titulo {
+    margin-bottom: 20px;
+    color: #FAFAFA; 
+}
+
+#show-middle {
+    
+}
+
 .button {
-    display: flex;
-    align-items: flex-start;
+    display: inline-flex; 
+    align-items: center; 
     margin-bottom: 20px;
     padding: 10px;
-    border: 2px solid #007bff; /* borde azul */
     border-radius: 10px;
-    background-color: #f8f9fa; /* color de fondo */
+    border: 2px solid #087EC4;
+    background-color: #171F26; 
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 90%; /* ajusta el ancho según sea necesario */
-    max-width: 400px; /* ancho máximo */
+    width: 90%;
+    max-width: 400px; 
 }
 
 .button:hover {
-    background-color: #e9ecef; /* color de fondo al pasar el ratón */
+    background-color: #087EC4
 }
 
 .button img {
-    width: 100px; /* ajusta el ancho según sea necesario */
-    height: 100px; /* ajusta el alto según sea necesario */
-    border-radius: 50%;
-    margin-right: 20px; /* espacio entre la imagen y el contenido */
+    width: 20%; /* Modificado */
+    max-width: 50px; /* Modificado */
+    height: auto; /* Modificado */
+    margin-right: 20px; 
 }
 
 .content {
-    flex: 1; /* El contenido toma el espacio restante */
+    flex: 1;
+    color: #FAFAFA;
+}
+
+#show-buttom {
+    
 }
 
 /* Estilos para dispositivos con pantalla pequeña (por ejemplo, teléfonos) */
 @media (max-width: 768px) {
     #overlay {
-        width: 80%; /* Ajustar según sea necesario para dispositivos móviles */
+        width: 80%; 
+    }
+    
+    .button img {
+        width: 25%; /* Modificado */
+        max-width: 40px; /* Modificado */
     }
 }
